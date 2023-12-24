@@ -46,7 +46,11 @@ const GraphLine = ({
           color: getColor(node.value),
           filled: true
         })}
-        dot={(node) => renderNode({
+        dot={(node: {
+          cx: number,
+          cy: number,
+          value: number
+        }) => renderNode({
           key: node.value,
           cx: node.cx,
           cy: node.cy,
